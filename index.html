@@ -1,194 +1,154 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+
     <title>Documento Acessibilidade</title>
+
 </head>
 
 <body class="tema_claro">
     <section>
-        <div>
-            <h1 style="font-size: 35px; margin: 25px 0 0 5px;">Acessibilidade</h1>
-            <p id="msg">Exemplos de acessibilidade que podemos adicionar em nosso código : </p>
-            <ul>
-                <li class="list">Descrição das imagens : </li>
-                <p>Para que
-                    uma pessoa com deficiência visual possa entender uma
-                    imagem, é necessário um texto explicativo.O
-                    recomendado, é que, esse texto alternativo seja o mais
-                    esclarecedor possível. De uma maneira que,
-                    qualquer pessoa que leia, ou escute aquela descrição,
-                    consiga compreender a imagem com clareza.
-                    Esse texto alternativo, é um atributo adicionado junto
-                    da tag img, ele tem o nome de alt=" ". Dentro das
-                    aspas é o local que temos para descrição. Vamos ver um
-                    exemplo:</p> <img class="img" src="img/imagem_dois_homens_conversando_de_frete_para_um_computador-1024x683.jpg" alt="Dois homens sentados próximos, de frente para uma
-                        mesa com computador, homem do lado direito tem cabelos
-                        curtos e lisos e está usando uma camisa de manga curta e
-                        calça, o outro rapaz, da esquerda, tem cabelos
-                        encaracolados curtos, camisa e bermuda">
-                <li class="list">Links e atalhos de navegação</li>
-                <p>Os
-                    links de uma página precisam ser utilizados de forma
-                    lógica, ou seja, que façam sentido à página.
-                    Pessoas que, por exemplo, não utilizam o mouse devido à
-                    mobilidade reduzida ou com alguma deficiência
-                    visual, utilizam softwares auxiliares ou atalhos do
-                    teclado, sendo assim, utilizam o TAB para percorrer
-                    pelos links de uma página.
-                    O tabindex é um atributo que ao ser adicionado as tags
-                    HTML, serve para criar uma sequência específica
-                    dos elementos HTML. A maioria dos navegadores já possui
-                    esse atalho integrado, como o Google Chrome,
-                    Firefox, Microsoft Edge entre outros.</p>
-                <p style="font-weight: bold; font-size: 18px;">Esse é um link para : <a style="color: blue;" href="https://www.google.com.br/">GOOGLE</a>.</p>
-                <li class="list">Estrutura de formulários</li>
-                <p>Formulários possuem dados do usuário, por muitas vezes, que podem ser sensíveis.
-                    Dessa forma, se torna algo que precisa de atenção redobrada.
-                    Já é algo comum o uso de tag semântica na criação de um
-                    formulário. Normalmente, segue um padrão bem
-                    conhecido: 
-                </p>
-                <ul class="ul-style">
-                    <li>form: é a tag
-                        que envolve os campos de um formulário.
-                    </li>
-                    <li>input:
-                        são os campos para preenchimento, podendo ser de
-                        vários tipos como, text, submit, radio,
-                        checkbox, number entre outros.
-                    </li>
-                    <li>textarea:
-                        essa tag é utilizada para que o usuário escreva
-                        textos maiores, utilizada normalmente para
-                        comentários de um post, ou até mesmo da página.
-                    </li>
-                    <li>select: é usado para criação de uma lista de itens
-                        predefinidas pelo desenvolvedor, como um menu de
-                        seleção.
-                    </li>
-                    <li>button: o uso mais comos
-                        preenchidos.
-                    </li>
-                </ul>
-                <p style="font-size: 18px;">Além
-                    dessas tags mais usadas, quando pensamos na parte da
-                    acessibilidade, é
-                    importante o uso de outras tags complementares, que
-                    deixam nosso HTML mais semântico e acessível.
-                </p>
-                <ul class="ul-style">
-                    <li>label: tag semântica para
-                        definir um nome para algum input.
-                    </li>
-                    <li>fieldset:
-                        usada para a separar as informações dos formulários
-                        em grupos. Por exemplo, dados pessoais
-                        e de endereço.
-                    </li>
-                    <li>legend: nela podemos,
-                        semanticamente, dar um rótulo para um, fieldset, por
-                        exemplo.
-                    </li>
-                    <li>optgroup: essa tag trabalha em
-                        conjunto com a tag select, é onde criamos grupos de
-                        opções.
-                    </li>
-                </ul>
-                <h4>Exemplo Formulário</h4>
-                <form>
-                    <fieldset class="fieldset">
-                        <div> 
-                            <label for="name">Preencha com seu nome:</label> 
-                            <input type="text" placeholder="digite seu nome" id="name" name="name"> 
-                        </div>
-                        <div> 
-                            <label for="text">Escreve uma mensagem : </label> 
-                            <textarea style="margin: 10px 0 0 12px; width: 181px; height: 15px;" id="text" placeholder="escreva aqui"></textarea>
-                        </div>
-                        <div> 
-                            <label for="age">Preencha com a sua idade:</label> <input placeholder="digite sua idade" style="margin: 10px 0px 0px 0px;" type="text" id="age" name="age">
-                        </div>
-                        <div> <label for="mood">Escolha o seu humor:</label>
-                            <select style="margin: 10px 0px 0px 0px;" id="mood" name="mood">
-                                <option>Feliz</option>
-                                <option>Triste</option>
-                                <option>Bravo</option>
-                                <option>Preocupado</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                </form>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="list"> Atributos ARIA</li>
-                <p>ARIA significa,
-                    Aplicações para a Internet Ricas em Acessibilidade. Esse
-                    atributo pode ser usado em qualquer tag dentro do site.
-                    Ele ajuda quando se é necessário passar mais informações
-                    do que realmente um elemento faz na nossa página.
-                    Existem inúmeras variações para esse atributo. Para
-                    utilizá-lo, escreve-se da seguinte maneira, primeiro seu
-                    nome e depois o que queremos descrever separado por um -
-                    (hífen), aria-.... Vamos ver alguns exemplos.</p>
-                <li>
-                    aria-required: nele indicamos para leitores de tela,
-                    informar para o usuário a necessidade de preenchimento
-                    do campo.
-                </li>
-                <li> aria-haspopup: informa ao usuário que um botão,
-                    abrirá uma janela de pop-up
-                </li>
-                <li> aria-checked: esse atributo informa que o input,
-                    checkbox ou radio button já está marcado.
-                </li>
-                <li> aria-disabled: ele avisa ao usuário que o campo
-                    está desabilitado.
-                </li>
-                <li> aria-label: informa que esse campo é o rótulo de
-                    algum outro elemento, ou seja, ele associa um elemento
-                    ao outro
-                </li>
-                <li> aria-multiline: normalmente usado junto da tag
-                    textarea, ele pode receber o valor de true ou false,
-                    indicando se o campo pode, ou não, ter mais de uma linha
-                    para escrever
-                </li>
-                <li> aria-labelledby: ao contraio do aria-label, esse
-                    atributo, indica que um elemento esta sendo rotulado
-                    pelo elemento indicado dentro do aria-labelledby=" ".
-                </li>
-                <p> Além dos exemplos citados a cima, existem outros
-                    muitos atributos ARIA que não só podemos, como decerto,
-                    devemos utilizar. Na <a rel="noopener noreferrer" target="_blank" class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles" title="oficial do site do Mozilla">documentação oficial no site do Mozilla</a>, tem uma lista de todos os atributos disponíveis e suas definições.
-                </p>
-            </ul>
-        </div>
-        <article>
-            <h2 style="text-align: center;">Conclusão</h2>
-            <p style="font-size: 16px;text-justify: auto;margin: 0 0 10px 10px;"> 
-                Saber, não só como criar, mas sim estruturar de
-                forma completa uma página é fundamental. Desenvolver essa
-                mentalidade, principalmente no começo, quando estamos
-                aprendendo, é o que nos dá uma base sólida de conhecimento.
-                Por fim, é importante pensar no quão bem nossa página ficará
-                ranqueada ao se utilizar um HTML acessível e semântico.
-                Entretanto, o que realmente importante, é que consigamos dar
-                aos usuários de nossa página uma ótima experiência, seja ela
-                uma pessoa com deficiência ou não.
-            </p>
-        </article>
-        <div> 
-            <button class="btn">Clique em mim!</button>
-        </div>
-        <script src="app.js"></script>
-    </section>
-</body>
+    <div>
+        <h1 style="font-size: 35px;margin: 25px 0 0 5px;">Acessibilidade</h1>
+        <p id="msg">Exemplos de acessibilidade que podemos adicionar em nosso código :</p>
 
+        <ul>
+            <li class="list">Descrição das imagens : </li>
+            <p>Para que uma pessoa com deficiência visual possa entender uma imagem, é necessário um texto explicativo.O
+                recomendado, é que, esse texto alternativo seja o mais esclarecedor possível. De uma maneira que,
+                qualquer pessoa que leia, ou escute aquela descrição, consiga compreender a imagem com clareza.
+
+                Esse texto alternativo, é um atributo adicionado junto da tag img, ele tem o nome de alt=" ". Dentro das
+                aspas é o local que temos para descrição. Vamos ver um exemplo:</p>
+            <img class="img" src="img/imagem_dois_homens_conversando_de_frete_para_um_computador-1024x683.jpg"
+                alt="Dois homens sentados próximos, de frente para uma mesa com computador, homem do lado direito tem cabelos curtos e lisos e está usando uma camisa de manga curta e calça, o outro rapaz, da esquerda, tem cabelos encaracolados curtos, camisa e bermuda">
+            <li class="list">Links e atalhos de navegação</li>
+            <p>Os links de uma página precisam ser utilizados de forma lógica, ou seja, que façam sentido à página.
+                Pessoas que, por exemplo, não utilizam o mouse devido à mobilidade reduzida ou com alguma deficiência
+                visual, utilizam softwares auxiliares ou atalhos do teclado, sendo assim, utilizam o TAB para percorrer
+                pelos links de uma página.
+
+                O tabindex é um atributo que ao ser adicionado as tags HTML, serve para criar uma sequência específica
+                dos elementos HTML. A maioria dos navegadores já possui esse atalho integrado, como o Google Chrome,
+                Firefox, Microsoft Edge entre outros.</p>
+            <p style="font-weight: bold; font-size: 18px;">Esse é um link para : <a style="color: blue;"
+                    href="https://www.google.com.br/">GOOGLE</a>.</p>
+
+            <li class="list">Estrutura de formulários</li>
+            <p>Formulários possuem dados do usuário, por muitas vezes, que podem ser sensíveis. Dessa forma, se torna
+                algo que precisa de atenção redobrada.
+
+                Já é algo comum o uso de tag semântica na criação de um formulário. Normalmente, segue um padrão bem
+                conhecido: </p>
+               
+            <ul class="ul-style">
+                <li>form: é a tag que envolve os campos de um formulário.</li>
+                <li>input: são os campos para preenchimento, podendo ser de vários tipos como, text, submit, radio,
+                    checkbox, number entre outros.</li>
+                <li>textarea: essa tag é utilizada para que o usuário escreva textos maiores, utilizada normalmente para
+                    comentários de um post, ou até mesmo da página.</li>
+                <li>select: é usado para criação de uma lista de itens predefinidas pelo desenvolvedor, como um menu de
+                    seleção.</li>
+                <li>button: o uso mais comos preenchidos.</li>
+            </ul>
+            <p style="font-size: 18px;">Além dessas tags mais usadas, quando pensamos na parte da acessibilidade, é
+                    importante o uso de outras tags complementares, que deixam nosso HTML mais semântico e acessível.
+             </p>
+
+            <ul class="ul-style">
+                <li>label: tag semântica para definir um nome para algum input.</li>
+                <li>fieldset: usada para a separar as informações dos formulários em grupos. Por exemplo, dados pessoais
+                    e de endereço.</li>
+                <li>legend: nela podemos, semanticamente, dar um rótulo para um, fieldset, por exemplo.</li>
+                <li>optgroup: essa tag trabalha em conjunto com a tag select, é onde criamos grupos de opções.</li>
+
+            </ul>
+
+            <h4>Exemplo Formulário</h4>
+            <form>
+                <fieldset class="fieldset">
+                <div>
+                        <label for="name">Preencha com seu nome:</label>
+                        <input type="text" placeholder="digite seu nome" id="name" name="name">
+                </div>
+                <div>
+                        <label for="text">Escreve uma mensagem : </label>
+                        <textarea style="margin: 10px 0 0 12px;width: 181px;
+                        height: 15px;" id="text" placeholder="escreva aqui"></textarea>
+                </div>
+                <div>
+                    <label for="age">Preencha com a sua idade:</label>
+                    <input placeholder="digite sua idade" style="margin: 10px 0px 0px 0px;" type="text" id="age" name="age">
+                </div>
+                <div>
+                    <label for="mood">Escolha o seu humor:</label>
+                    <select style="margin: 10px 0px 0px 0px;" id="mood" name="mood">
+                        <option>Feliz</option>
+                        <option>Triste</option>
+                        <option>Bravo</option>
+                        <option>Preocupado</option>
+                    </select>
+                </div>
+                </fieldset>
+            </form>
+        </ul>
+    </div>
+
+    <div>
+        <ul>
+            <li class="list"> Atributos ARIA</li>
+            <p>ARIA significa, Aplicações para a Internet Ricas em Acessibilidade. Esse atributo pode ser usado em qualquer tag dentro do site. Ele ajuda quando se é necessário passar mais informações do que realmente um elemento faz na nossa página.
+
+                Existem inúmeras variações para esse atributo. Para utilizá-lo, escreve-se da seguinte maneira, primeiro seu nome e depois o que queremos descrever separado por um - (hífen), aria-.... Vamos ver alguns exemplos.</p>
+            <li>
+                aria-required: nele indicamos para leitores de tela, informar para o usuário a necessidade de preenchimento do campo.
+            </li>
+            <li>
+                aria-haspopup: informa ao usuário que um botão, abrirá uma janela de pop-up
+            </li>
+            <li>
+                aria-checked: esse atributo informa que o input, checkbox ou radio button já está marcado.
+            </li>
+            <li>
+                aria-disabled: ele avisa ao usuário que o campo está desabilitado.
+            </li>
+            <li>
+                aria-label: informa que esse campo é o rótulo de algum outro elemento, ou seja, ele associa um elemento ao outro
+            </li>
+            <li>
+                aria-multiline: normalmente usado junto da tag textarea, ele pode receber o valor de true ou false, indicando se o campo pode, ou não, ter mais de uma linha para escrever
+            </li>
+            <li>
+                aria-labelledby: ao contraio do aria-label, esse atributo, indica que um elemento esta sendo rotulado pelo elemento indicado dentro do aria-labelledby=" ".
+            </li>
+            <p>
+                Além dos exemplos citados a cima, existem outros muitos atributos ARIA que não só podemos, como decerto, devemos utilizar. Na <a rel="noopener noreferrer" target="_blank" class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles" title="oficial do site do Mozilla">documentação oficial no site do Mozilla</a>, tem uma lista de todos os atributos disponíveis e suas definições.
+    
+            </p>
+        </ul>
+
+
+    </div>
+
+    <article>
+        
+            <h2 style="text-align: center;">Conclusão</h2>
+            <p style="font-size: 16px;text-justify: auto;margin: 0 0 10px 10px;">
+                Saber, não só como criar, mas sim estruturar de forma completa uma página é fundamental. Desenvolver essa mentalidade, principalmente no começo, quando estamos aprendendo, é o que nos dá uma base sólida de conhecimento.
+                Por fim, é importante pensar no quão bem nossa página ficará ranqueada ao se utilizar um HTML acessível e semântico. 
+                Entretanto, o que realmente importante, é que consigamos dar aos usuários de nossa página uma ótima experiência, seja ela uma pessoa com deficiência ou não.
+            </p>
+        
+    </article>
+    <div>
+        <button class="btn">Clique em mim!</button>
+    </div>
+    <script src="app.js"></script>
+</section>
+</body>
 </html>
