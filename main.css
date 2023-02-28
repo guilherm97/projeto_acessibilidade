@@ -48,11 +48,11 @@ p{
 }
 .btn {
     position: absolute;
-    top: 25px;
-    left: 280px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+    top: 20px;
+    left: 235px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70%;
     border: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
