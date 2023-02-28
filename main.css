@@ -1,0 +1,80 @@
+root {
+
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+
+    border: 1px solid teal;
+    display: flex;
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+#msg {
+    margin: 50px 0px 0px 10px;
+    font-size: 22px;
+}
+
+li {
+    list-style: circle;
+}
+.ul-style {
+
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p {
+
+    font-size: 16px;
+}
+
+.list {
+    list-style: square;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    font-size: 25px;
+}
+
+.fieldset {
+
+    width: 30%;
+}
+
+.img {
+
+    width: 20%;
+}
+
+.btn {
+
+    position: absolute;
+    top: 25px;
+    left: 280px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.tema_claro {
+
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.tema_escuro {
+
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
